@@ -1,60 +1,192 @@
-E-Commerce Customer & Order Insights (SQL Analytics Project)
-This project provides a comprehensive SQL-based analysis of a Brazilian e-commerce dataset. The focus is on key areas of customer behavior, sales performance, product trends, and review patterns. The analysis is structured into five progressive phases, each building on the last to reveal data-driven business insights. 
-Table of Contents
-Project Overview
-Dataset
-Project Structure
-Key Insights
-Highlight Queries
-Tools Used
-Repository Layout
-Project Overview
-The project uses SQL to analyze an e-commerce dataset, moving from basic data exploration to complex strategic insights. The analysis involves:
-Phase 1: Data Exploration - Understanding the dataset's scope and performing basic joins.
-Phase 2: Customer Behavior Analysis - Examining repeat orders, review patterns, and identifying active customers.
-Phase 3: Profitability Insights - Analyzing sales and category profitability.
-Phase 4: Customer Segmentation & CLV - Creating customer segments based on derived metrics like Customer Lifetime Value (CLV).
-Phase 5: Strategic Customer & Product Insights - Studying customer inactivity, seasonality, and product co-purchase trends. 
-Dataset
-The analysis uses a Brazilian e-commerce dataset containing the following information:
-Customer demographics and unique IDs
-Order and payment details
-Product information
-Seller data
-Review scores and messages
-Project Structure
-The project is organized into five phases, with increasing complexity at each stage. 
-Phase	Title	Key Focus	SQL Concepts Used
-Phase 1	Data Exploration	Dataset overview, table joins, customer & order basics	INNER JOIN, GROUP BY, COUNT, AVG
-Phase 2	Customer Behavior Analysis	Repeat orders, review response time, active customers	Joins, Subqueries, Date functions
-Phase 3	Profitability Insights	Sales and category profitability analysis	Aggregates, CASE WHEN, Ranking
-Phase 4	Customer Segmentation & CLV	Segmentation by CLV and correlation with reviews	CTEs, Derived metrics, Correlation logic
-Phase 5	Strategic Customer & Product Insights	Inactivity analysis, seasonality, product co-purchase trends	Window functions, Date extraction, Self-joins
-Key Insights
-Based on the analysis, several key insights were uncovered:
-Seasonal Trends: Orders exhibit a strong concentration in specific periods, such as May and August, indicating potential seasonal demand peaks influenced by holidays or local festivals.
-Customer Satisfaction vs. Value: High-value and low-value customers provide similar review scores. This suggests a consistent service quality that is not dependent on the customer's spending level.
-Cross-Sell Opportunities: Identification of frequently co-purchased product categories points to clear opportunities for bundle promotions.
-Customer Retention Needs: The short-term engagement patterns observed in most customers indicate a need for focused retention strategies to increase long-term loyalty. 
-Highlight Queries
-A few of the project's most insightful queries include:
-Customer Lifetime Value (CLV): A query was developed to calculate each customer's lifetime value by using their average purchase value and frequency. It then segments customers into High or Low Value.
-Inactive Customer Detection: A query identifies customers who have not placed an order in over 3,000 days, flagging potential churn candidates for re-engagement campaigns.
-Seasonality Trends: A query groups orders by month to find seasonal demand peaks and troughs.
-Product Co-Purchase Pairs: A query finds the top 10 most frequently co-purchased product category combinations, providing a basis for cross-selling recommendations.
-Review & Segment Correlation: A query assesses whether customer value segments (e.g., High vs. Low) show different review patterns. The analysis found negligible correlation. 
-Tools Used
-SQL: Compatible with PostgreSQL and MySQL.
-Database Tools: DB Browser, pgAdmin, or BigQuery can be used for running queries and visualizing data.
-Optional Tools: Google Colab or Python can be used for exploratory data translation and plotting.
-Repository Layout
-e-commerce-sql-analysis
-┣ 📄 phase1_exploration.sql
-┣ 📄 phase2_customer_behavior.sql
-┣ 📄 phase3_profitability_analysis.sql
-┣ 📄 phase4_customer_segmentation.sql
-┣ 📄 phase5_strategic_insights.sql
-┣ 📄 README.md
-Author Note
-This project was developed step-by-step to connect theoretical SQL concepts with practical business analytics. It culminates in advanced segmentation and trend analysis, demonstrating a comprehensive approach to data-driven decision-making. 
-AI can make mistakes, so double-check responses
+📦 Olist E-Commerce Analytics Project
+
+Technologies: PostgreSQL • SQL • Power BI • DAX • Data Modeling
+Dataset: Brazilian Olist E-commerce Dataset (100k+ orders)
+
+📘 Project Overview
+
+This project is a complete end-to-end analytics pipeline, covering:
+
+Data Exploration & Cleaning (SQL)
+
+Operational & Delivery Analytics
+
+Product & Customer Segmentation
+
+Seller Performance & Fraud Detection
+
+Customer Value & Retention Analysis
+
+Power BI Dashboard Development
+
+The goal is to derive business insights related to:
+
+sales & revenue
+
+customer behavior
+
+product performance
+
+delivery speed
+
+seller quality
+
+customer reviews and responsiveness
+
+🛠️ 1. SQL Data Pipeline
+✔ Phase 1 — Data Quality + Basic Analysis
+
+Customer repeat purchase check
+
+Delivery date inconsistencies
+
+Top products by review score
+
+Payment behavior patterns
+
+Customer classification (Gold/Silver/Bronze)
+
+✔ Phase 2 — Logistics & Delivery
+
+Avg delivery duration
+
+% late deliveries
+
+Sellers causing maximum delay
+
+Delivery time vs review score (correlation)
+
+State-wise delivery delays
+
+✔ Phase 3 — Product & Customer Segmentation
+
+Ranking products inside categories
+
+Region–category preference map
+
+High sales but low review score flag
+
+Category revenue by region
+
+Trend-setter customer identification
+
+Full RFM segmentation
+
+✔ Phase 4 — Seller & Review Intelligence
+
+Seller reliability scoring
+
+Freight efficiency analysis
+
+Monthly sales trends
+
+Fraud/Anomaly detection across regions
+
+Seller anomaly detection
+
+Review response segmentation
+
+Interaction score modeling
+
+Correlation study between reply time & review score
+
+✔ Phase 5 — CLV & Seasonality
+
+Customer Lifetime Value
+
+Churn prediction (active vs inactive)
+
+Seasonality trends
+
+Combined insights summary
+
+📊 2. Power BI Dashboard Development
+✔ Data Modeling
+
+Central Fact Table: order_items
+
+Dimension tables: Orders, Customers, Sellers, Products, Reviews, Payments
+
+Relationships: 1-to-many using primary keys
+
+Clean star-schema for efficient DAX & reporting
+
+✔ DAX Measures
+
+Total Revenue
+
+Delivery Days
+
+Average Review Score
+
+CLV
+
+Freight-to-Price Ratio
+
+Monthly Revenue
+
+✔ Dashboard Pages
+Dashboard 1: Executive Overview
+
+Total revenue
+
+Total orders
+
+Review score average
+
+Delivery time distribution
+
+Monthly revenue trend
+
+Customer state distribution
+
+Key influencer on price
+
+Dashboard 2: Product & Review Performance
+
+Revenue by product category
+
+Review score distribution
+
+Delivery time vs review score scatter
+
+Category-level ranking table
+
+Dashboard 3: Customer & CLV Analytics
+
+CLV distribution
+
+Average delivery days
+
+Delivery day distribution
+
+State & city filters
+
+Customer retention segmentation
+
+Dashboard 4: Seller Performance Dashboard
+
+Freight vs revenue scatter
+
+Seller revenue table
+
+Freight ratio bar chart
+
+Review score vs seller behavior
+
+📍 3. Business Insights Summary
+🔹 Key Conclusions
+
+Customer retention is extremely low — most customers order only once.
+
+Delivery delays strongly reduce review scores.
+
+Sellers with high delivery lag can be flagged and managed.
+
+A few product categories contribute majority of revenue.
+
+Some regions show chronically high delays, requiring logistics improvement.
+
+High CLV customers do not give better reviews → service improvements must be uniform.
+
+Review response time segmentation shows fast replies dominate, but there is scope to improve long-tail cases.
