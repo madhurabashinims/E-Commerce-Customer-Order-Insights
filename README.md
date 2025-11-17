@@ -1,149 +1,192 @@
+📦 Olist E-Commerce Analytics Project
 
-# 🛒 E-Commerce SQL Analytics Project
+Technologies: PostgreSQL • SQL • Power BI • DAX • Data Modeling
+Dataset: Brazilian Olist E-commerce Dataset (100k+ orders)
 
-> A complete **SQL-based analytical study** of an e-commerce dataset, uncovering patterns in **customer behavior, revenue trends, and product performance** through structured query analysis.
+📘 Project Overview
 
----
+This project is a complete end-to-end analytics pipeline, covering:
 
-## 📁 Project Overview
+Data Exploration & Cleaning (SQL)
 
-This project focuses on **deriving business insights** from e-commerce transactional data using **pure SQL**.
-Each phase explores a key aspect of customer and business analytics — from understanding order patterns to evaluating profitability and customer lifetime value (CLV).
+Operational & Delivery Analytics
 
-The dataset includes tables such as:
+Product & Customer Segmentation
 
-* `customers`
-* `orders`
-* `order_items`
-* `order_payments`
-* `order_reviews`
-* `products`
+Seller Performance & Fraud Detection
 
----
+Customer Value & Retention Analysis
 
-## ⚙️ Tools & Environment
+Power BI Dashboard Development
 
-* **Database:** PostgreSQL / MySQL
-* **Query Language:** SQL
-* **Environment:** DBeaver / MySQL Workbench / pgAdmin
-* **Data Visualization (optional):** Excel / Python (matplotlib / seaborn)
+The goal is to derive business insights related to:
 
----
+sales & revenue
 
-## 📊 Project Phases
+customer behavior
 
-### **🧩 Phase 1 — Basic Insights**
+product performance
 
-* Explored total customers, orders, and unique products.
-* Identified most frequently ordered products and payment methods.
-* Examined distribution of review scores.
+delivery speed
 
-> 📝 *These exploratory queries provide a baseline understanding of customer and order characteristics.*
+seller quality
 
----
+customer reviews and responsiveness
 
-### **📦 Phase 2 — Product & Revenue Analysis**
+🛠️ 1. SQL Data Pipeline
+✔ Phase 1 — Data Quality + Basic Analysis
 
-* Linked product categories with revenue contribution.
-* Calculated **top 10 profitable categories**.
-* Compared **average payment values per category**.
+Customer repeat purchase check
 
-> 💡 *Helped identify high-value categories driving majority of revenue.*
+Delivery date inconsistencies
 
----
+Top products by review score
 
-### **💰 Phase 3 — Customer Segmentation & CLV**
+Payment behavior patterns
 
-* Computed **Customer Lifetime Value (CLV)** based on purchase frequency and average payment.
-* Segmented customers into **High-Value** and **Low-Value** groups.
-* Compared **average review scores** across segments.
+Customer classification (Gold/Silver/Bronze)
 
-> 📈 *Revealed that customer satisfaction scores were stable across all segments — indicating consistent service quality.*
+✔ Phase 2 — Logistics & Delivery
 
----
+Avg delivery duration
 
-### **🕒 Phase 4 — Seasonality & Behavioral Analysis**
+% late deliveries
 
-* Identified **monthly order trends** to detect seasonal peaks.
-* Analyzed **co-purchased product pairs** using self-joins.
-* Calculated **active vs inactive customers** based on recent orders.
+Sellers causing maximum delay
 
-> 🌤️ *Orders peaked during May and August — aligning with Brazilian summer and festival periods.*
-> 🔗 *Common product combinations (e.g., Electronics + Accessories) suggest cross-selling potential.*
+Delivery time vs review score (correlation)
 
----
+State-wise delivery delays
 
-### **📈 Phase 5 — Advanced Analytical Extensions**
+✔ Phase 3 — Product & Customer Segmentation
 
-1. **Correlation Analysis**
+Ranking products inside categories
 
-   * Checked statistical relationship between **review scores and CLV segmentation** (result: weak correlation).
+Region–category preference map
 
-2. **Customer Retention Patterns**
+High sales but low review score flag
 
-   * Used `last_order` date to classify active/inactive customers.
+Category revenue by region
 
-3. **Seasonality and Growth**
+Trend-setter customer identification
 
-   * Monthly and quarterly order counts highlight operational trends.
+Full RFM segmentation
 
-> ⚙️ *These advanced queries connect customer engagement, seasonality, and satisfaction into actionable intelligence.*
+✔ Phase 4 — Seller & Review Intelligence
 
----
+Seller reliability scoring
 
-## 📋 Key Insights
+Freight efficiency analysis
 
-| Analysis               | Finding                                       | Business Impact                             |
-| ---------------------- | --------------------------------------------- | ------------------------------------------- |
-| **CLV Segmentation**   | ~30% customers are high-value                 | Focus retention efforts on these customers  |
-| **Seasonality**        | Orders peak in May & August                   | Align marketing campaigns with these months |
-| **Review Correlation** | No strong relationship between review and CLV | Service quality consistent                  |
-| **Co-Purchase Pairs**  | Electronics + Accessories frequent            | Targeted bundle offers                      |
+Monthly sales trends
 
----
+Fraud/Anomaly detection across regions
 
-## 📊 Sample Visuals
+Seller anomaly detection
 
-| Visualization                                 | Description                                   |
-| --------------------------------------------- | --------------------------------------------- |
-| ![Monthly Orders](visuals/monthly_orders.png) | Orders by month show seasonal peaks           |
-| ![Top Categories](visuals/top_categories.png) | Highest revenue-generating product categories |
-| ![Co-purchase Pairs](visuals/co_purchase.png) | Frequent co-bought category combinations      |
+Review response segmentation
 
-> *(You can generate these using Excel or matplotlib and place them inside a `/visuals` folder.)*
+Interaction score modeling
 
----
+Correlation study between reply time & review score
 
-## 🧭 Business Takeaways
+✔ Phase 5 — CLV & Seasonality
 
-* Consistent customer experience regardless of purchase value.
-* Seasonal spikes suggest optimal times for promotions.
-* CLV segmentation helps tailor loyalty and retention campaigns.
-* Product pair analysis reveals cross-selling opportunities.
+Customer Lifetime Value
 
----
+Churn prediction (active vs inactive)
 
-## 🚀 How to Run
+Seasonality trends
 
-1. Open any SQL editor (DBeaver, MySQL Workbench, or pgAdmin).
-2. Import the dataset tables.
-3. Run the SQL scripts in the following order:
+Combined insights summary
 
-   ```
-   1_Phase1_Basics.sql  
-   2_Phase2_Products.sql  
-   3_Phase3_Customer_Segmentation.sql  
-   4_Phase4_Seasonality.sql  
-   5_Phase5_Advanced_Analysis.sql
-   ```
-4. (Optional) Use exported query results to create charts or dashboards.
+📊 2. Power BI Dashboard Development
+✔ Data Modeling
 
----
+Central Fact Table: order_items
 
-## 🏷️ Tags
+Dimension tables: Orders, Customers, Sellers, Products, Reviews, Payments
 
-`sql` • `data-analysis` • `business-intelligence` • `customer-segmentation` • `ecommerce` • `analytics`
+Relationships: 1-to-many using primary keys
 
----
+Clean star-schema for efficient DAX & reporting
 
-Would you like me to make a **GitHub-ready version** (with image links and collapsible query sections like “click to view SQL”)? It’ll make your README look like a published analytics report.
+✔ DAX Measures
+
+Total Revenue
+
+Delivery Days
+
+Average Review Score
+
+CLV
+
+Freight-to-Price Ratio
+
+Monthly Revenue
+
+✔ Dashboard Pages
+Dashboard 1: Executive Overview
+
+Total revenue
+
+Total orders
+
+Review score average
+
+Delivery time distribution
+
+Monthly revenue trend
+
+Customer state distribution
+
+Key influencer on price
+
+Dashboard 2: Product & Review Performance
+
+Revenue by product category
+
+Review score distribution
+
+Delivery time vs review score scatter
+
+Category-level ranking table
+
+Dashboard 3: Customer & CLV Analytics
+
+CLV distribution
+
+Average delivery days
+
+Delivery day distribution
+
+State & city filters
+
+Customer retention segmentation
+
+Dashboard 4: Seller Performance Dashboard
+
+Freight vs revenue scatter
+
+Seller revenue table
+
+Freight ratio bar chart
+
+Review score vs seller behavior
+
+📍 3. Business Insights Summary
+🔹 Key Conclusions
+
+Customer retention is extremely low — most customers order only once.
+
+Delivery delays strongly reduce review scores.
+
+Sellers with high delivery lag can be flagged and managed.
+
+A few product categories contribute majority of revenue.
+
+Some regions show chronically high delays, requiring logistics improvement.
+
+High CLV customers do not give better reviews → service improvements must be uniform.
+
+Review response time segmentation shows fast replies dominate, but there is scope to improve long-tail cases.
