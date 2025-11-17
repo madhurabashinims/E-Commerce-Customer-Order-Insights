@@ -104,3 +104,25 @@ The project includes:
 ---
 
 
+---
+
+# 🎯 **4. Key Achievements**
+
+- Built 50+ advanced SQL queries using window functions, CTEs, RFM, and anomaly detection  
+- Designed a professional BI data model using star schema  
+- Created 4 interactive dashboards with KPIs, drilldowns, slicers, and DAX  
+- Delivered insights across sales, logistics, product performance, customer behavior, and seller operations  
+
+---
+
+# ⭐ **5. Project Screenshots**
+<img width="1687" height="922" alt="Customer Segmentation" src="https://github.com/user-attachments/assets/85bb5ea6-ad59-4937-8ffa-f0e29757c82b" />
+<img width="1686" height="919" alt="Sales Overview" src="https://github.com/user-attachments/assets/b58aee0e-c1ac-427e-98ce-f503917c7b7e" />
+
+
+---
+
+# 🧑‍💻 **Author**
+Madhura Bashini  
+SQL • Power BI • Python • Analytics  
+
