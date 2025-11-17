@@ -1,192 +1,107 @@
-📦 Olist E-Commerce Analytics Project
+#  **Olist E-Commerce Analytics Project**  
+**Tech Stack:** PostgreSQL • SQL • Power BI • DAX • Data Modeling  
+**Dataset:** Brazilian Olist E-commerce Dataset (100k+ orders)
+
+---
+
+## **Project Overview**
 
-Technologies: PostgreSQL • SQL • Power BI • DAX • Data Modeling
-Dataset: Brazilian Olist E-commerce Dataset (100k+ orders)
+This is a complete **end-to-end analytics pipeline**, combining SQL + Power BI to generate actionable insights across sales, logistics, product behavior, customers, and seller performance.
 
-📘 Project Overview
+The project includes:
 
-This project is a complete end-to-end analytics pipeline, covering:
+- **Phase 1:** Data Quality & Exploration  
+- **Phase 2:** Delivery & Logistics Analysis  
+- **Phase 3:** Product & Customer Segmentation (Advanced SQL)  
+- **Phase 4:** Seller Reliability & Fraud Detection  
+- **Phase 5:** CLV, Churn & Seasonality  
+- **Power BI:** Full interactive dashboard suite with DAX measures  
 
-Data Exploration & Cleaning (SQL)
+---
 
-Operational & Delivery Analytics
+#  **1. SQL Data Pipeline**
 
-Product & Customer Segmentation
+## **✔ Phase 1 — Data Quality & Basic Analysis**
+- Repeat purchase patterns  
+- Maximum delivery delays  
+- Best-rated product categories  
+- Payment behavior  
+- Customer spending segmentation (Gold/Silver/Bronze)
 
-Seller Performance & Fraud Detection
+---
 
-Customer Value & Retention Analysis
+## **✔ Phase 2 — Logistics & Delivery Analysis**
+- Average delivery time  
+- % of late deliveries  
+- Sellers with longest delivery delay  
+- Delivery speed vs review score correlation  
+- Customer-state-wise delivery performance  
 
-Power BI Dashboard Development
+---
 
-The goal is to derive business insights related to:
+## **✔ Phase 3 — Product & Customer Segmentation**
+- Ranking products inside categories  
+- Region-wise product category preference  
+- High-sales, low-reviews anomaly products  
+- Revenue contribution by region  
+- Niche category trend-setter customers  
+- RFM-style segmentation (Recency & Monetary)
 
-sales & revenue
+---
 
-customer behavior
+## **✔ Phase 4 — Seller & Review Intelligence**
+- Seller reliability score  
+- Freight cost efficiency  
+- Sales trends over time  
+- Regional anomaly/fraud detection  
+- Seller anomaly detection  
+- Review reply-time segmentation  
+- Interaction score modeling  
+- Correlation analysis between reply time & review score  
 
-product performance
+---
 
-delivery speed
+## **✔ Phase 5 — CLV & Seasonality**
+- Customer Lifetime Value  
+- Churn classification (Active vs Inactive)  
+- Seasonality trends (Peak buying months)  
+- Consolidated business insights  
 
-seller quality
+---
 
-customer reviews and responsiveness
+#  **2. Power BI Dashboard Development**
 
-🛠️ 1. SQL Data Pipeline
-✔ Phase 1 — Data Quality + Basic Analysis
+## **Data Modeling**
+- Designed clean **Star Schema**
+- Fact: `order_items`
+- Dimensions: Orders, Customers, Products, Sellers, Reviews, Payments
 
-Customer repeat purchase check
+## **DAX Measures Used**
+- Total Revenue  
+- Delivery Days  
+- Average Review Score  
+- CLV  
+- Freight-to-Price Ratio  
+- Monthly Revenue  
 
-Delivery date inconsistencies
+## **Dashboard Pages**
+1. **Executive Overview**  
+2. **Product & Review Performance**  
+3. **Customer & CLV Analytics**  
+4. **Seller Performance Dashboard**
 
-Top products by review score
+---
 
-Payment behavior patterns
+#  **3. Business Insights Summary**
 
-Customer classification (Gold/Silver/Bronze)
+- Customer retention is extremely low — most customers purchase **only once**.  
+- Delivery delay has a **strong negative impact** on review scores.  
+- Some sellers consistently cause delivery delays → need intervention.  
+- A small set of categories drives majority of revenue.  
+- High CLV customers do **not** give better reviews → service must be uniform.  
+- Review response time segmentation shows strong fast-reply performance, but long-tail delays need improvement.
 
-✔ Phase 2 — Logistics & Delivery
+---
 
-Avg delivery duration
+# 📘 **4. How to Use This Repository**
 
-% late deliveries
-
-Sellers causing maximum delay
-
-Delivery time vs review score (correlation)
-
-State-wise delivery delays
-
-✔ Phase 3 — Product & Customer Segmentation
-
-Ranking products inside categories
-
-Region–category preference map
-
-High sales but low review score flag
-
-Category revenue by region
-
-Trend-setter customer identification
-
-Full RFM segmentation
-
-✔ Phase 4 — Seller & Review Intelligence
-
-Seller reliability scoring
-
-Freight efficiency analysis
-
-Monthly sales trends
-
-Fraud/Anomaly detection across regions
-
-Seller anomaly detection
-
-Review response segmentation
-
-Interaction score modeling
-
-Correlation study between reply time & review score
-
-✔ Phase 5 — CLV & Seasonality
-
-Customer Lifetime Value
-
-Churn prediction (active vs inactive)
-
-Seasonality trends
-
-Combined insights summary
-
-📊 2. Power BI Dashboard Development
-✔ Data Modeling
-
-Central Fact Table: order_items
-
-Dimension tables: Orders, Customers, Sellers, Products, Reviews, Payments
-
-Relationships: 1-to-many using primary keys
-
-Clean star-schema for efficient DAX & reporting
-
-✔ DAX Measures
-
-Total Revenue
-
-Delivery Days
-
-Average Review Score
-
-CLV
-
-Freight-to-Price Ratio
-
-Monthly Revenue
-
-✔ Dashboard Pages
-Dashboard 1: Executive Overview
-
-Total revenue
-
-Total orders
-
-Review score average
-
-Delivery time distribution
-
-Monthly revenue trend
-
-Customer state distribution
-
-Key influencer on price
-
-Dashboard 2: Product & Review Performance
-
-Revenue by product category
-
-Review score distribution
-
-Delivery time vs review score scatter
-
-Category-level ranking table
-
-Dashboard 3: Customer & CLV Analytics
-
-CLV distribution
-
-Average delivery days
-
-Delivery day distribution
-
-State & city filters
-
-Customer retention segmentation
-
-Dashboard 4: Seller Performance Dashboard
-
-Freight vs revenue scatter
-
-Seller revenue table
-
-Freight ratio bar chart
-
-Review score vs seller behavior
-
-📍 3. Business Insights Summary
-🔹 Key Conclusions
-
-Customer retention is extremely low — most customers order only once.
-
-Delivery delays strongly reduce review scores.
-
-Sellers with high delivery lag can be flagged and managed.
-
-A few product categories contribute majority of revenue.
-
-Some regions show chronically high delays, requiring logistics improvement.
-
-High CLV customers do not give better reviews → service improvements must be uniform.
-
-Review response time segmentation shows fast replies dominate, but there is scope to improve long-tail cases.
