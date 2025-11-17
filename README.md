@@ -103,5 +103,4 @@ The project includes:
 
 ---
 
-# 📘 **4. How to Use This Repository**
 
