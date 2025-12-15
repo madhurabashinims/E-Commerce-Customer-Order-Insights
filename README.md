@@ -21,7 +21,7 @@ The project includes:
 
 #  **1. SQL Data Pipeline**
 
-## **✔ Phase 1 — Data Quality & Basic Analysis**
+## Phase 1 — Data Quality & Basic Analysis
 - Repeat purchase patterns  
 - Maximum delivery delays  
 - Best-rated product categories  
@@ -30,7 +30,7 @@ The project includes:
 
 ---
 
-##  Phase 2 — Logistics & Delivery Analysis**
+##  Phase 2 — Logistics & Delivery Analysis
 - Average delivery time  
 - % of late deliveries  
 - Sellers with longest delivery delay  
@@ -39,7 +39,7 @@ The project includes:
 
 ---
 
-## **✔ Phase 3 — Product & Customer Segmentation**
+##  Phase 3 — Product & Customer Segmentation
 - Ranking products inside categories  
 - Region-wise product category preference  
 - High-sales, low-reviews anomaly products  
@@ -49,7 +49,7 @@ The project includes:
 
 ---
 
-## **✔ Phase 4 — Seller & Review Intelligence**
+##  Phase 4 — Seller & Review Intelligence
 - Seller reliability score  
 - Freight cost efficiency  
 - Sales trends over time  
@@ -61,7 +61,7 @@ The project includes:
 
 ---
 
-## **✔ Phase 5 — CLV & Seasonality**
+##  Phase 5 — CLV & Seasonality
 - Customer Lifetime Value  
 - Churn classification (Active vs Inactive)  
 - Seasonality trends (Peak buying months)  
@@ -106,7 +106,7 @@ The project includes:
 
 ---
 
-# 🎯 **4. Key Achievements**
+# **4. Key Achievements**
 
 - Built 50+ advanced SQL queries using window functions, CTEs, RFM, and anomaly detection  
 - Designed a professional BI data model using star schema  
@@ -115,14 +115,14 @@ The project includes:
 
 ---
 
-# ⭐ **5. Project Screenshots**
+# **5. Project Screenshots**
 <img width="1687" height="922" alt="Customer Segmentation" src="https://github.com/user-attachments/assets/85bb5ea6-ad59-4937-8ffa-f0e29757c82b" />
 <img width="1686" height="919" alt="Sales Overview" src="https://github.com/user-attachments/assets/b58aee0e-c1ac-427e-98ce-f503917c7b7e" />
 
 
 ---
 
-# 🧑‍💻 **Author**
+#  **Author**
 Madhura Bashini  
 SQL • Power BI • Python • Analytics  
 
