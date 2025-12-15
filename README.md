@@ -30,7 +30,7 @@ The project includes:
 
 ---
 
-## **✔ Phase 2 — Logistics & Delivery Analysis**
+##  Phase 2 — Logistics & Delivery Analysis**
 - Average delivery time  
 - % of late deliveries  
 - Sellers with longest delivery delay  
